@@ -1,0 +1,99 @@
+.navbar {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-secondary-3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+}
+
+.nav__logo {
+    height: 36px;
+}
+
+/* Toggle (hamburger) */
+.nav__toggle {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.bar {
+    width: 24px;
+    height: 2px;
+    background: var(--color-secondary-1);
+}
+
+/* Pills container */
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__links a {
+    font-weight: 600;
+    color: var(--color-secondary-1);
+    position: relative;
+    padding: 0.45rem 1.5rem;
+    border: 1px solid var(--color-secondary-3);
+    border-radius: 9999px;
+    transition: background 0.25s ease-in-out;
+}
+
+.nav__links a:hover {
+    background: var(--color-secondary-1);
+    color: var(--color-white);
+    border-color: var(--color-secondary-1);
+}
+
+.nav__links a.active {
+    background: var(--color-secondary-1);
+    color: var(--color-white);
+    border-color: var(--color-secondary-1);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .nav__toggle {
+        display: flex;
+    }
+
+    .nav__links {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1rem 1.25rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transform-origin: top right;
+        transform: scale(0);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .nav__links.open {
+        transform: scale(1);
+    }
+
+    .nav__links li+li {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav__toggle {
+        display: none;
+    }
+}

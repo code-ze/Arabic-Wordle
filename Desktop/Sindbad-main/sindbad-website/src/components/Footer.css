@@ -1,0 +1,16 @@
+.footer {
+    background-color: var(--color-secondary-3);
+    padding-block: 2rem;
+    margin-top: auto;
+}
+
+.footer__inner {
+    text-align: center;
+    color: var(--color-secondary-1);
+    font-size: 0.9rem;
+}
+
+.credits {
+    color: var(--color-secondary-2);
+    margin-top: 0.5rem;
+}
